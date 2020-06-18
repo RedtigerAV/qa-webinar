@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   @ViewChild('bik', {static: false}) bik: ElementRef;
   form: FormGroup;
   showFile = true;
+  fileDisabled = false;
   showAllRequiredError = false;
   showINNError = false;
   showBIKError = false;
@@ -37,6 +38,7 @@ export class AppComponent implements OnInit {
     this.form.controls.photo.valueChanges.subscribe(value => {
       if (value) {
         this.showFile = false;
+        this.fileDisabled = true;
       }
     });
   }
@@ -48,6 +50,7 @@ export class AppComponent implements OnInit {
       this.form.reset();
       this.showAllRequiredError = true;
       this.showFile = true;
+      this.fileDisabled = false;
 
       return;
     } else {

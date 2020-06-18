@@ -1,0 +1,36 @@
+.wrapper {
+  padding: 20px;
+  width: 30%;
+  margin: auto;
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+}
+
+#index {
+  margin-left: -30px;
+}
+
+.custom-file {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  button {
+    width: 150px;
+  }
+}
+
+.error {
+  color: red;
+}
